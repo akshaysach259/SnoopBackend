@@ -32,6 +32,7 @@ public class User implements Serializable {
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id",referencedColumnName = "id")
     List<Contacts> contactsList = new ArrayList<>();
+    private String profilePicPath;
 
     public UUID getId() {
         return id;
